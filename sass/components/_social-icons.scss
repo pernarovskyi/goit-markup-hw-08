@@ -1,0 +1,30 @@
+.socials__item {
+  @include width-height(44px, 44px);
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.socials__link-icon {
+  @include transition(fill);
+  @include transition(background-color, 2600ms);
+}
+
+.socials__link {
+  @include width-height(100%, 100%);
+
+  @include flex-center();
+  border-radius: 50%;
+
+  @include transition(background-color);
+
+  &:hover,
+  &:focus,
+  &:hover .socials__link-icon,
+  &:focus .socials__link-icon {
+    fill: #ffffff;
+    background-color: var(--accent-color);
+    cursor: pointer;
+  }
+}

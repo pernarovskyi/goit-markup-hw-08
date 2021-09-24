@@ -1,0 +1,36 @@
+.about__top-indent {
+  padding-top: 0;
+}
+
+.about__list {
+  @include flex-center();
+}
+
+.about__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about__wraper {
+  position: relative;
+  display: flex;
+  & img {
+    border: none;
+  }
+}
+
+.about__overlay-title {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+
+  bottom: 0;
+  margin: 0;
+
+  @include flex-center();
+
+  @include font-face($fw: 700, $ls: 0.03em);
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(47, 48, 58, 0.8);
+}

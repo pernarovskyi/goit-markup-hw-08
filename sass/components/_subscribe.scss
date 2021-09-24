@@ -1,0 +1,33 @@
+.subscribe {
+  @include flex-center();
+}
+
+.subscribe__input-email {
+  width: 348px;
+  background: transparent;
+  border: none;
+  padding: 15px 0;
+  padding-left: 16px;
+  margin-right: 12px;
+
+  @include bordered(rgba(255, 255, 255, 0.3));
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: rgba(255, 255, 255, 0.6);
+
+  @include transition(border);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.subscribe__btn {
+  @include flex-center();
+
+  margin-top: 0;
+}
+
+.subscribe__btn-icon {
+  margin-left: 10px;
+}

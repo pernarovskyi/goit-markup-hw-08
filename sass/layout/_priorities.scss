@@ -1,0 +1,40 @@
+.priority__list {
+  display: flex;
+}
+
+.priority__item {
+  &::before {
+    content: "";
+    display: block;
+    margin-bottom: 30px;
+    height: 120px;
+
+    @include background-attributes($size: 70px);
+    background-color: #f5f4fa;
+    border-radius: 4px;
+  }
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+$items: "antenna", "clock", "diagram", "astronaut";
+
+@each $item in $items {
+  .icon-#{$item}::before {
+    background-image: url("../images/icons/#{$item}.svg");
+  }
+}
+
+.priority__item-title {
+  margin-bottom: 10px;
+  @include font-face($fw: 700);
+  text-transform: uppercase;
+}
+
+.priority__item-text {
+  margin: 0;
+
+  @include font-face($lh: 1.71);
+  color: var(--secondary-text-color);
+}

@@ -1,0 +1,12 @@
+.section {
+  padding: 94px 0;
+}
+
+.section__title {
+  margin-bottom: 50px;
+
+  @include font-face($fw: 700, $fs: 36px, $lh: 1.17);
+  text-align: center;
+
+  color: var(--section-title-text-color);
+}

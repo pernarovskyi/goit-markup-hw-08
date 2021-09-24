@@ -1,0 +1,32 @@
+@mixin font-face($fw: 400, $fs: 14px, $lh: 1.14, $ff: inherit, $ls: inherit) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  font-family: $ff;
+  letter-spacing: $ls;
+}
+
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin background-attributes($size) {
+  background-size: $size;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin width-height($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin transition($param, $time: 250ms) {
+  transition: $param $time var(--cubic-bezier);
+}
+
+@mixin bordered($color) {
+  border: 1px solid $color;
+}

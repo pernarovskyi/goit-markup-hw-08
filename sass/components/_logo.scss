@@ -1,0 +1,14 @@
+.logo {
+  @include font-face(700, 26px, 1.17, ("Raleway"), 0.03);
+  color: var(--accent-color);
+}
+
+.logo--indents {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
+}
+
+.logo--color {
+  color: #000000;
+}

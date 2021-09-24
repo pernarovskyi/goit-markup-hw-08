@@ -1,0 +1,39 @@
+.footer {
+  padding: 60px 0;
+  background-color: var(--section-bg-color);
+}
+
+.footer__address {
+  margin-right: 70px;
+}
+
+.logo__footer {
+  color: #ffffff;
+}
+
+.footer__social {
+  margin-right: 93px;
+}
+
+.footer__block-title {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  @include font-face($fw: 700);
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.footer-social-list {
+  display: flex;
+}
+
+.footer__socials-icon--bg {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer__socials-icon--fill {
+  fill: #ffffff;
+}

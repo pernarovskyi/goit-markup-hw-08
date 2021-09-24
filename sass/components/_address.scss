@@ -1,0 +1,30 @@
+.address {
+  font-style: normal;
+  color: #ffffff;
+
+  & a {
+    cursor: pointer;
+  }
+}
+
+.address__list {
+  margin-top: 20px;
+}
+
+.address__item-wrap {
+  display: block;
+
+  @include width-height(231px, 21px);
+
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.addres__text {
+  @include font-face($lh: 1.71);
+}
+
+.address__mail-tel {
+  color: rgba(255, 255, 255, 0.6);
+}

@@ -1,0 +1,111 @@
+.form__lable {
+  display: block;
+  margin-bottom: 4px;
+
+  @include font-face($fs: 12px, $lh: calc(14 / 12), $ls: 0.01em);
+  color: var(--secondary-text-color);
+}
+
+.form__input {
+  @include width-height(100%, 40px);
+  margin-bottom: 12px;
+  padding-left: 42px;
+  padding-right: 12px;
+  @include bordered(rgba(33, 33, 33, 0.2));
+  border-radius: 4px;
+
+  font-size: 16px;
+
+  @include bordered(border);
+  transition: border 250ms var(--cubic-bezier);
+
+  &:focus {
+    @include bordered(var(--accent-color));
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+
+    & ~ .input__icon {
+      fill: var(--accent-color);
+    }
+  }
+}
+
+.form__input-wraper {
+  position: relative;
+}
+
+.input__icon {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  fill: var(--button-text-color);
+
+  @include transition(fill);
+}
+
+.form__comment {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+
+  @include bordered(rgba(33, 33, 33, 0.2));
+
+  resize: none;
+  border-radius: 4px;
+
+  @include font-face($fs: 12px, $lh: calc(14 / 12), $ls: 0.01em);
+
+  @include transition(border);
+
+  &::placeholder {
+    @include font-face($fs: 14px, $lh: calc(16 / 14), $ls: 0.01em);
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:focus {
+    outline: none;
+    @include bordered(var(--accent-color));
+  }
+}
+
+.form__policy-wraper {
+  @include flex-center();
+}
+
+.form__checkbox:checked + .form__policy-text::before {
+  background-color: var(--accent-color);
+  background-image: url(../images/icons/check.svg);
+  @include background-attributes(contain);
+  border: none;
+}
+
+.form__policy-text {
+  &::before {
+    content: "";
+    @include width-height(16px, 16px);
+    margin-right: 8px;
+    border: 2px solid var(--button-text-color);
+    border-radius: 2px;
+  }
+  @include flex-center();
+  @include font-face($fs: 14px, $lh: 1.7);
+
+  text-align: center;
+
+  color: var(--secondary-text-color);
+}
+
+.modal-window__btn--position {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.form__policy-link {
+  text-decoration-line: underline;
+
+  color: var(--accent-color);
+}

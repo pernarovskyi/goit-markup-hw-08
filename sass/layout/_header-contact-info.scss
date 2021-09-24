@@ -1,0 +1,29 @@
+.contact-info {
+  display: flex;
+}
+
+.contact-info__link + .contact-info__link {
+  margin-left: 50px;
+}
+
+.contact-info__link {
+  padding: 32px 0;
+  @include font-face($fw: 500, $ls: 0.02em);
+  color: var(--secondary-text-color);
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    fill: currentColor;
+  }
+}
+
+.contact-info__link {
+  @include flex-center();
+  fill: var(--secondary-text-color);
+  transition: color 250ms var(--cubic-bezier);
+}
+
+.contact-info__item {
+  margin-right: 10px;
+}

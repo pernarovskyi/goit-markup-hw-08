@@ -1,0 +1,11 @@
+body {
+  @include font-face(
+    $ff: (
+      "Roboto",
+      sans-serif,
+    ),
+    $ls: 0.03em
+  );
+
+  color: var(--page-main-text-color);
+}

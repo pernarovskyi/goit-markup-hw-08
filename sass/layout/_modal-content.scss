@@ -1,0 +1,8 @@
+.modal-window__title {
+  display: block;
+
+  margin-bottom: 12px;
+  @include font-face($fw: 700, $fs: 20px, $lh: 1.15);
+  text-align: center;
+  color: var(--page-main-text-color);
+}
