@@ -2,3 +2,13 @@
   display: flex;
   justify-content: space-between;
 }
+
+
+.space-between--footer{
+  flex-direction: column;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

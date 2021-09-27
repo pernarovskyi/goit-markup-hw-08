@@ -1,9 +1,13 @@
 .address {
   font-style: normal;
-  color: #ffffff;
-
+  color: #ffffff;  
+ 
   & a {
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
   }
 }
 
@@ -14,10 +18,15 @@
 .address__item-wrap {
   display: block;
 
+  
   @include width-height(231px, 21px);
 
   &:not(:last-child) {
     margin-bottom: 9px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin: 0 auto;
   }
 }
 

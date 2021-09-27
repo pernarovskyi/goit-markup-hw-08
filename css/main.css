@@ -26,6 +26,17 @@
   justify-content: space-between;
 }
 
+.space-between--footer {
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) {
+  .space-between--footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 html {
   box-sizing: border-box;
   margin: 0 auto;
@@ -403,6 +414,12 @@ body {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1199px) {
+  .address {
+    text-align: center;
+  }
+}
+
 .address__list {
   margin-top: 20px;
 }
@@ -415,6 +432,12 @@ body {
 
 .address__item-wrap:not(:last-child) {
   margin-bottom: 9px;
+}
+
+@media screen and (max-width: 1199px) {
+  .address__item-wrap {
+    margin: 0 auto;
+  }
 }
 
 .addres__text {
@@ -433,15 +456,26 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    flex-direction: row;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .subscribe__input-email {
-  width: 348px;
+  width: 100%;
   background: transparent;
   border: none;
   padding: 15px 0;
   padding-left: 16px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -451,6 +485,20 @@ body {
 
 .subscribe__input-email:focus {
   outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe__input-email {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe__input-email {
+    width: 348px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 }
 
 .subscribe__btn {
@@ -470,6 +518,8 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
+  padding: 94px 15px;
+  overflow-y: scroll;
   background: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -485,11 +535,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 90%;
-  min-height: 609px;
+  width: 90%;
   padding: 20px;
   padding-top: 40px;
-  overflow: scroll;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -497,7 +545,7 @@ body {
 
 @media screen and (min-width: 480px) {
   .modal-window {
-    min-width: 450px;
+    width: 450px;
     min-height: 609px;
     padding: 40px;
   }
@@ -505,7 +553,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .modal-window {
-    min-width: 528px;
+    width: 528px;
     min-height: 581px;
   }
 }
@@ -1254,15 +1302,31 @@ body {
 }
 
 .footer__address {
-  margin-right: 70px;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__address {
+    margin-left: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__address {
+    margin-left: 0;
+    margin-right: 70px;
+    margin-bottom: 0;
+  }
 }
 
 .logo__footer {
   color: #ffffff;
 }
 
-.footer__social {
-  margin-right: 93px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__social {
+    margin-right: 60px;
+  }
 }
 
 .footer__block-title {
@@ -1278,8 +1342,23 @@ body {
   color: #ffffff;
 }
 
+@media screen and (max-width: 1199px) {
+  .footer__block-title {
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
 .footer-social-list {
   display: flex;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-social-list {
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 60px;
+  }
 }
 
 .footer__socials-icon--bg {
@@ -1288,6 +1367,26 @@ body {
 
 .footer__socials-icon--fill {
   fill: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__768-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__768-wrap {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__form-input--wrap {
+    display: flex;
+  }
 }
 
 .button-list {
@@ -1304,6 +1403,7 @@ body {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
