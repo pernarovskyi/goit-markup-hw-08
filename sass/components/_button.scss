@@ -20,10 +20,20 @@
   }
 }
 
+.button__filter--indent {
+  display: block;
+  margin-bottom: 21px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+
 .button__wide--blue {
-  margin-top: 30px;
-  padding: 10px 0;
+  // margin-top: 30px;
+  // padding: 10px 0;
   width: 200px;
+  height: 50px;
 
   @include font-face($fw: 700, $fs: 16px, $lh: 1.87, $ls: 0.06em);
   color: #ffffff;

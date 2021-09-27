@@ -1,12 +1,23 @@
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+  width: 100%;
+
+  @media screen and (min-width: $third-bp) {
+    padding: 94px 0;
+  }
 }
 
 .section__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
-  @include font-face($fw: 700, $fs: 36px, $lh: 1.17);
+  @include font-face($fw: 700, $fs: 28px, $lh: 1.17);
   text-align: center;
 
   color: var(--section-title-text-color);
+
+  @media screen and (min-width: $third-bp) {
+    margin-bottom: 50px;
+
+    @include font-face($fw: 700, $fs: 36px);
+  }
 }

@@ -1,0 +1,118 @@
+.button-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  & li:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.portfolio-list {
+  width: 100%;
+  //   @include flex-center();
+  display: flex;
+  flex-wrap: wrap;
+  // margin-top: 50px;
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    margin: -15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    margin: -15px;
+  }
+}
+
+.portfolio-item {
+  transition: box-shadow 250ms var(--cubic-bezier);
+
+  margin-bottom: 30px;
+
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+  }
+
+  &:hover .text-overlay {
+    transform: translateY(0%);
+  }
+
+  & img {
+    margin-bottom: -3px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 6 * 15px) / 3);
+    margin: 15px;
+  }
+}
+
+.item-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-overlay {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  overflow: auto;
+  transform: translateY(101%);
+  transition: transform 250ms var(--cubic-bezier);
+}
+
+.text-prop {
+  @include font-face($fs: 18px, $lh: 1.56);
+  color: #ffffff;
+}
+
+// .item-container {
+//   display: flex;
+//   flex-direction: column;
+//   height: 34.5%;
+// }
+
+.item-description {
+  border-bottom: none;
+}
+
+.item-text {
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+
+  //   flex-grow: 1;
+
+  & h2 {
+    margin-bottom: 4px;
+
+    @include font-face($fw: 700, $fs: 18px, $lh: 2, $ls: 0.06em);
+  }
+
+  & a {
+    margin-bottom: 0;
+
+    // display: flex;
+    // flex-direction: column;
+    // height: 100%;
+
+    @include font-face($fs: 16px, $lh: 1.88);
+    color: var(--secondary-text-color);
+  }
+}

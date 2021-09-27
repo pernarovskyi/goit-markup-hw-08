@@ -2,7 +2,15 @@
   display: block;
 
   margin-bottom: 12px;
-  @include font-face($fw: 700, $fs: 20px, $lh: 1.15);
+  @include font-face($fw: 700, $fs: 18px, $lh: 1.5);
   text-align: center;
   color: var(--page-main-text-color);
+
+  @media screen and (min-width: 480px) {
+    @include font-face($fw: 700, $fs: 20px, $lh: 1.5);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font-face($fw: 700, $fs: 20px, $lh: 1.15);
+  }
 }

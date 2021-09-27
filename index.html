@@ -66,6 +66,90 @@
             +38 096 111 11 11
           </a>
         </div>
+        <button
+          class="nav__mobile-menu--btn"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-open
+        >
+          <svg class="mobile-menu__icon" width="40" height="40">
+            <use href="./images/icons/sprite.svg#icon-mob-menu"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu is-hidden" id="mobile-menu" data-menu>
+          <div class="mobile-menu__container">
+            <button
+              type="button"
+              class="mobile-menu__btn-close"
+              data-menu-close
+            >
+              <svg width="40" height="40">
+                <use href="./images/icons/sprite.svg#icon-close-btn"></use>
+              </svg>
+            </button>
+            <div class="mobile-menu__content-wraper">
+              <ul class="mobile-menu__list list">
+                <li class="mobile-menu__item">
+                  <a
+                    class="mobile-menu__main-link link current-page"
+                    href="./index.html"
+                    >Студия</a
+                  >
+                </li>
+                <li class="mobile-menu__item">
+                  <a class="mobile-menu__main-link link" href="./portfolio.html"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="mobile-menu__item">
+                  <a class="mobile-menu__main-link link" href="">Контакты</a>
+                </li>
+              </ul>
+              <div class="mobile-menu__bottom-container">
+                <p class="mobile-menu__contact mobile-menu__contact--tel">
+                  <a
+                    class="link"
+                    href="tel:+380961111111"
+                    target="_blank"
+                    rel="no-referrer noopener"
+                  >
+                    +38 096 111 11 11
+                  </a>
+                </p>
+                <p class="mobile-menu__contact mobile-menu__contact--mail">
+                  <a
+                    class="link"
+                    href="mailto:info@devstudio.com"
+                    target="_blank"
+                    rel="no-referrer noopener"
+                  >
+                    info@devstudio.com
+                  </a>
+                </p>
+                <ul class="mobile-menu__socials list">
+                  <li class="mobile-menu__socials-item">
+                    <a class="mobile-menu__social-link link" href=""
+                      >Instagram</a
+                    >
+                  </li>
+                  <li class="mobile-menu__socials-item">
+                    <a class="mobile-menu__social-link link" href="">Twitter</a>
+                  </li>
+                  <li class="mobile-menu__socials-item">
+                    <a class="mobile-menu__social-link link" href=""
+                      >Facebook</a
+                    >
+                  </li>
+                  <li class="mobile-menu__socials-item">
+                    <a class="mobile-menu__social-link link" href=""
+                      >LinkedIn</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -84,31 +168,31 @@
       <section class="section">
         <div class="container">
           <h2 class="visually-hidden">Приоритеты</h2>
-          <ul class="priority__list list">
-            <li class="priority__item icon-antenna">
-              <h3 class="priority__item-title">Внимание к деталям</h3>
-              <p class="priority__item-text">
+          <ul class="features__list list">
+            <li class="features__item icon-antenna">
+              <h3 class="features__item-title">Внимание к деталям</h3>
+              <p class="features__item-text">
                 Идейные соображения, а также начало повседневной работы по
                 формированию позиции.
               </p>
             </li>
-            <li class="priority__item icon-clock">
-              <h3 class="priority__item-title">Пунктуальность</h3>
-              <p class="priority__item-text">
+            <li class="features__item icon-clock">
+              <h3 class="features__item-title">Пунктуальность</h3>
+              <p class="features__item-text">
                 Задача организации, в особенности же рамки и место обучения
                 кадров влечет за собой.
               </p>
             </li>
-            <li class="priority__item icon-diagram">
-              <h3 class="priority__item-title">Планирование</h3>
-              <p class="priority__item-text">
+            <li class="features__item icon-diagram">
+              <h3 class="features__item-title">Планирование</h3>
+              <p class="features__item-text">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает
               </p>
             </li>
-            <li class="priority__item icon-astronaut">
-              <h3 class="priority__item-title">Современные технологии</h3>
-              <p class="priority__item-text">
+            <li class="features__item icon-astronaut">
+              <h3 class="features__item-title">Современные технологии</h3>
+              <p class="features__item-text">
                 Значимость этих проблем настолько очевидна, что реализация
                 плановых заданий.
               </p>
@@ -162,11 +246,14 @@
           <ul class="team__list list">
             <li class="team__item">
               <img
-                src="./images/team-member-1-min.jpg"
                 alt="Игорь Демьяненко"
-                width="270"
+                src="./images/team-member-1-450@1x.jpg"
+                srcset="
+                  ./images/team-member-1-450@1x.jpg 1x,
+                  ./images/team-member-1-900@2x.jpg 2x
+                "
               />
-              <div class="team__item-description team__card-mb">
+              <div class="team__item-description">
                 <h3>Игорь Демьяненко</h3>
                 <p lang="en" class=".team__pos-descr">Product Designer</p>
                 <ul class="team__socials list">
@@ -231,9 +318,12 @@
             </li>
             <li class="team__item">
               <img
-                src="./images/team-member-2-min.jpg"
                 alt="Ольга Репина"
-                width="270"
+                src="./images/team-member-2-450@1x.jpg"
+                srcset="
+                  ./images/team-member-2-450@1x.jpg 1x,
+                  ./images/team-member-2-900@2x.jpg 2x
+                "
               />
               <div class="team__item-description">
                 <h3>Ольга Репина</h3>
@@ -302,9 +392,12 @@
             </li>
             <li class="team__item">
               <img
-                src="./images/team-member-3-min.jpg"
                 alt="Николай Тарасов"
-                width="270"
+                src="./images/team-member-3-450@1x.jpg"
+                srcset="
+                  ./images/team-member-3-450@1x.jpg 1x,
+                  ./images/team-member-3-900@2x.jpg 2x
+                "
               />
               <div class="team__item-description">
                 <h3>Николай Тарасов</h3>
@@ -371,9 +464,12 @@
             </li>
             <li class="team__item">
               <img
-                src="./images/team-member-4-min.jpg"
                 alt="Михаил Ермаков"
-                width="270"
+                src="./images/team-member-4-450@1x.jpg"
+                srcset="
+                  ./images/team-member-4-450@1x.jpg 1x,
+                  ./images/team-member-4-900@2x.jpg 2x
+                "
               />
               <div class="team__item-description">
                 <h3>Михаил Ермаков</h3>
@@ -444,7 +540,7 @@
       <section class="section">
         <div class="container">
           <h2 class="section__title">Постоянные клиенты</h2>
-          <ul class="flex-list list">
+          <ul class="clients__list list">
             <li class="clients__item">
               <a
                 class="client__link link"
@@ -522,7 +618,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container space-between">
         <address class="address address__text footer__address">
           <a href="./" class="logo link">
@@ -635,7 +731,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal-window">
         <button
@@ -730,5 +826,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
