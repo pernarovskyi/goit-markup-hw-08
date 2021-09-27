@@ -1,14 +1,15 @@
-.space-between {
-  display: flex;
-  justify-content: space-between;
-}
-
-
-.space-between--footer{
-  flex-direction: column;
-
+.space-between__footer {
   @media screen and (min-width: 1200px) {
-    flex-direction: row;
+    display: flex;
     justify-content: space-between;
   }
 }
+
+.space-between__header{  
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  
+  

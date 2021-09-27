@@ -21,20 +21,16 @@
   clip: rect(0 0 0 0);
 }
 
-.space-between {
-  display: flex;
-  justify-content: space-between;
-}
-
-.space-between--footer {
-  flex-direction: column;
-}
-
 @media screen and (min-width: 1200px) {
-  .space-between--footer {
-    flex-direction: row;
+  .space-between__footer {
+    display: flex;
     justify-content: space-between;
   }
+}
+
+.space-between__header {
+  display: flex;
+  justify-content: space-between;
 }
 
 html {
@@ -414,12 +410,6 @@ body {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1199px) {
-  .address {
-    text-align: center;
-  }
-}
-
 .address__list {
   margin-top: 20px;
 }
@@ -434,9 +424,10 @@ body {
   margin-bottom: 9px;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .address__item-wrap {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -456,16 +447,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .subscribe {
-    flex-direction: row;
-    margin-left: 0;
-    margin-right: 0;
+    flex-direction: column;
   }
 }
 
@@ -475,7 +461,6 @@ body {
   border: none;
   padding: 15px 0;
   padding-left: 16px;
-  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -487,9 +472,15 @@ body {
   outline: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .subscribe__input-email {
     width: 450px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .subscribe__input-email {
+    margin-bottom: 20px;
   }
 }
 
@@ -497,7 +488,6 @@ body {
   .subscribe__input-email {
     width: 348px;
     margin-right: 12px;
-    margin-bottom: 0;
   }
 }
 
@@ -1301,8 +1291,11 @@ body {
   background-color: var(--section-bg-color);
 }
 
-.footer__address {
-  margin-bottom: 60px;
+@media screen and (max-width: 767px) {
+  .footer__address {
+    text-align: center;
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1313,9 +1306,8 @@ body {
 
 @media screen and (min-width: 1200px) {
   .footer__address {
-    margin-left: 0;
     margin-right: 70px;
-    margin-bottom: 0;
+    margin-left: 0;
   }
 }
 
@@ -1323,9 +1315,22 @@ body {
   color: #ffffff;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 768px) {
+  .footer__social {
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .footer__social {
     margin-right: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__social {
+    margin-right: 93px;
   }
 }
 
@@ -1342,10 +1347,15 @@ body {
   color: #ffffff;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .footer__block-title {
     text-align: center;
-    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__block-title {
+    text-align: center;
   }
 }
 
@@ -1353,11 +1363,10 @@ body {
   display: flex;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .footer-social-list {
     justify-content: center;
     align-content: center;
-    margin-bottom: 60px;
   }
 }
 
@@ -1369,23 +1378,20 @@ body {
   fill: #ffffff;
 }
 
-@media screen and (min-width: 768px) {
-  .footer__768-wrap {
-    display: flex;
-    flex-direction: row;
+.footer__768-wraper {
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .footer__768-wraper {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__768-wraper {
     justify-content: space-between;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer__768-wrap {
-    justify-content: flex-start;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer__form-input--wrap {
-    display: flex;
+    margin-bottom: 60px;
   }
 }
 
@@ -1410,6 +1416,7 @@ body {
   .portfolio-list {
     width: 768px;
     margin: -15px;
+    justify-content: left;
   }
 }
 

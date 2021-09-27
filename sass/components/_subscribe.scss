@@ -1,25 +1,17 @@
 .subscribe {
   @include flex-center();
-  flex-direction: column;
 
-  margin-left: auto;
-  margin-right: auto;
-
-  @media screen and (min-width: 1200px) {
-    
-    flex-direction: row;
-    margin-left: 0;
-    margin-right: 0;
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
   }
 }
 
-.subscribe__input-email {
+.subscribe__input-email {  
   width: 100%;
   background: transparent;
   border: none;
   padding: 15px 0;
   padding-left: 16px;
-  margin-bottom: 20px;
   
   @include bordered(rgba(255, 255, 255, 0.3));
   border-radius: 4px;
@@ -32,14 +24,17 @@
     outline: none;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 480px) {  
     width: 450px;
+  }
+
+  @media screen and (max-width: 1199px) {  
+    margin-bottom: 20px;
   }
 
   @media screen and (min-width: 1200px) {
     width: 348px;
-    margin-right: 12px;
-    margin-bottom: 0;
+    margin-right: 12px;    
   }
 }
 
