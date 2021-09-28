@@ -6,7 +6,6 @@
   width: 100vw;
   height: 100vh;
 
-  // transform: translateX(100%);
   z-index: 999;
   background-color: #ffffff;
 }
@@ -62,6 +61,13 @@
   @media screen and (min-width: 480px) {
     @include font-face($fw: 500, $fs: 40px, $lh: 1.18, $ls: 0.02em);
   }
+
+  @media screen and (max-height: 375px) {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    @include font-face($fw: 500, $fs: 22px, $lh: 1, $ls: 0.01em);
+  }
 }
 
 .mobile-menu__main-link {
@@ -76,6 +82,10 @@
   // justify-content: flex-end;
   position: fixed;
   bottom: 48px;
+
+  @media screen and (max-height: 375px) {
+    margin-left: 30%;
+  }
 }
 
 .mobile-menu__contact {
@@ -92,6 +102,11 @@
   @media screen and (min-width: 480px) {
     @include font-face($fw: 500, $fs: 34px, $lh: 1.18, $ls: 0.02em);
   }
+
+  @media screen and (max-height: 375px) {
+    margin-bottom: 10px;
+    @include font-face($fw: 500, $fs: 26px, $lh: 1.1, $ls: 0.02em);
+  }
 }
 
 .mobile-menu__contact--mail {
@@ -104,6 +119,11 @@
   @media screen and (min-width: 480px) {
     margin-bottom: 64px;
     @include font-face($fw: 500, $fs: 24px, $lh: 1.17, $ls: 0.02em);
+  }
+
+  @media screen and (max-height: 375px) {
+    margin-bottom: 20px;
+    @include font-face($fw: 500, $fs: 16px, $lh: 1.1, $ls: 0.02em);
   }
 }
 
@@ -126,5 +146,9 @@
 
   @media screen and (min-width: 480px) {
     @include font-face($fw: 500, $fs: 18px, $lh: 1.22, $ls: 0.02em);
+  }
+
+  @media screen and (max-height: 375px) {
+    @include font-face($fw: 500, $fs: 12px, $lh: 1.1, $ls: 0.03em);
   }
 }
