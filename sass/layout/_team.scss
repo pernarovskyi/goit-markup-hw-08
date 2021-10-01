@@ -46,8 +46,7 @@
     @media screen and (min-width: 1200px) {
         padding-bottom: 30px;
         &>h3 {
-            @include font-face($fw: 500, $fs: 16px, $lh: 1.9);
-            // margin-bottom: 0;
+            @include font-face($fw: 500, $fs: 16px, $lh: 1.9);            
         }
         &>p {
             @include font-face($fs: 16px, $lh: 1.8);
