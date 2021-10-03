@@ -1061,6 +1061,12 @@ body {
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .features__item-title {
+    text-align: left;
+  }
+}
+
 .features__item-text {
   margin-bottom: 0;
   font-weight: 400;

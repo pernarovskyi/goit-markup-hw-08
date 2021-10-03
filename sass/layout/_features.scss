@@ -1,4 +1,4 @@
-.features__list {  
+.features__list {
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
@@ -17,7 +17,7 @@
     @include background-attributes($size: 70px);
     background-color: #f5f4fa;
     border-radius: 4px;
-  }  
+  }
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -47,6 +47,10 @@ $items: "antenna", "clock", "diagram", "astronaut";
   @include font-face($fw: 700);
   text-transform: uppercase;
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 
 .features__item-text {
